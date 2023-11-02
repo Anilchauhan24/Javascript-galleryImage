@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .gallery {
+            display: block;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        img {
+            display: none;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .controls {
+
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gallary">
+
+        <img src="download1.jpg" alt="imageone">
+        <img src="download2.jpg" alt="imageone">
+        <img src="download3.jpg" alt="imageone">
+        <img src="download4.jpg" alt="imageone">
+
+    </div>
+    <div class="controls">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+
+    </div>
+
+
+    <!-- <script>
+
+        const images = document.querySelectorAll(".gallery img");
+        let currentIndex=0;
+        function showImages(index){
+
+
+        images[currentIndex].style.display = "none";
+        currentIndex=(index+ images.length)% images.length;
+
+        }
+    </script> -->
+
+    <script src="js.js"></script>
+</body>
+
+</html>
