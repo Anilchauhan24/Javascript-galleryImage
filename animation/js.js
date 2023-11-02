@@ -1,23 +1,27 @@
-const decan = document.querySelectorAll(".gallary img");
-let justCountImage = 0;
 
-function findImages(index) {
-    decan[justCountImage].style.display = "none";
-    justCountImage = (index + decan.length) % decan.length;
-    decan[justCountImage].style.display = "block";
+const slideImage = document.querySelectorAll(".gallary img");
 
-}
+let countSlideImage = 0;
+
+const getImageSlide = (index) => {
+
+    slideImage[countSlideImage].style.display = "none";
+    countSlideImage = (index + slideImage.length) % slideImage.length;
+    slideImage[countSlideImage].style.display = "block";
+};
+
 let nextButton = document.getElementById("next");
 
-nextButton.addEventListener("click", Hello);
+nextButton.addEventListener("click", changeView);
 
-function Hello() {
-    findImages(justCountImage + 1);
-}
+function changeView() {
+    getImageSlide(countSlideImage + 1);
+};
 
 let previousButton = document.getElementById("prev");
-previousButton.addEventListener("click", () => {
-    findImages(justCountImage - 1);
-})
 
-findImages(justCountImage);
+previousButton.addEventListener("click", () => {
+    getImageSlide(countSlideImage - 1)
+});
+
+getImageSlide(countSlideImage);

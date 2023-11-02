@@ -9,18 +9,21 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
+            background: black;
         }
 
         .gallery {
             display: block;
+            grid-template-columns: auto;
             max-width: 80%;
             margin: 0 auto;
         }
 
         img {
             display: none;
-            max-width: 100%;
             height: auto;
+            width: 200px;
+            height: 200px;
         }
 
         .controls {
@@ -37,14 +40,17 @@
 </head>
 
 <body>
-    <div class="gallary">
+    <center>
+        <div class="gallary" id="gal">
 
-        <img src="download1.jpg" alt="imageone">
-        <img src="download2.jpg" alt="imageone">
-        <img src="download3.jpg" alt="imageone">
-        <img src="download4.jpg" alt="imageone">
+            <img src="download1.jpg" alt="imageone">
+            <img src="download2.jpg" alt="imageone">
+            <img src="download3.jpg" alt="imageone">
+            <img src="download4.jpg" alt="imageone">
 
-    </div>
+        </div>
+    </center>
+
     <div class="controls">
         <button id="prev">Previous</button>
         <button id="next">Next</button>
@@ -64,8 +70,7 @@
 
         }
     </script> -->
-
-    <script src="js.js"></script>
+    <script src="api.js"></script>
 </body>
 
 </html>
